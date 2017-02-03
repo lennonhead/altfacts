@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		027C92BDDB0B627FAC1BE20E /* Pods_altfacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFC403AEAEAD077293DE3EE /* Pods_altfacts.framework */; };
 		C9F28B4F1E45472000F67738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F28B4E1E45472000F67738 /* AppDelegate.swift */; };
 		C9F28B511E45472000F67738 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9F28B501E45472000F67738 /* GameScene.sks */; };
 		C9F28B531E45472000F67738 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9F28B521E45472000F67738 /* Actions.sks */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DFC403AEAEAD077293DE3EE /* Pods_altfacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_altfacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4733F09E40661BE7F06EE823 /* Pods-altfacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-altfacts.release.xcconfig"; path = "Pods/Target Support Files/Pods-altfacts/Pods-altfacts.release.xcconfig"; sourceTree = "<group>"; };
+		BCF2CF1EFFFE4861C57E255B /* Pods-altfacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-altfacts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-altfacts/Pods-altfacts.debug.xcconfig"; sourceTree = "<group>"; };
 		C9F28B4B1E45472000F67738 /* altfacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = altfacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9F28B4E1E45472000F67738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9F28B501E45472000F67738 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -35,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				027C92BDDB0B627FAC1BE20E /* Pods_altfacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C658E7A350C9ABBFF0EE495D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCF2CF1EFFFE4861C57E255B /* Pods-altfacts.debug.xcconfig */,
+				4733F09E40661BE7F06EE823 /* Pods-altfacts.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C9F28B421E45472000F67738 = {
 			isa = PBXGroup;
 			children = (
 				C9F28B4D1E45472000F67738 /* altfacts */,
 				C9F28B4C1E45472000F67738 /* Products */,
+				C658E7A350C9ABBFF0EE495D /* Pods */,
+				F4E2CE21E116463DAA9C852F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +89,14 @@
 			path = altfacts;
 			sourceTree = "<group>";
 		};
+		F4E2CE21E116463DAA9C852F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DFC403AEAEAD077293DE3EE /* Pods_altfacts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9F28B631E45472000F67738 /* Build configuration list for PBXNativeTarget "altfacts" */;
 			buildPhases = (
+				3DD662270E4921DEBE0E2D0C /* [CP] Check Pods Manifest.lock */,
 				C9F28B471E45472000F67738 /* Sources */,
 				C9F28B481E45472000F67738 /* Frameworks */,
 				C9F28B491E45472000F67738 /* Resources */,
+				75B02723E707D98EB87D6250 /* [CP] Embed Pods Frameworks */,
+				BD8DD615FF4AD49CB334BBA6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,6 +169,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DD662270E4921DEBE0E2D0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		75B02723E707D98EB87D6250 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-altfacts/Pods-altfacts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD8DD615FF4AD49CB334BBA6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-altfacts/Pods-altfacts-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C9F28B471E45472000F67738 /* Sources */ = {
@@ -271,6 +346,7 @@
 		};
 		C9F28B641E45472000F67738 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCF2CF1EFFFE4861C57E255B /* Pods-altfacts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y4BA52GDRK;
@@ -284,6 +360,7 @@
 		};
 		C9F28B651E45472000F67738 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4733F09E40661BE7F06EE823 /* Pods-altfacts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y4BA52GDRK;
