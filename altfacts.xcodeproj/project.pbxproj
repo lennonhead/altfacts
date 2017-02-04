@@ -391,6 +391,7 @@
 				C9F28B651E45472000F67738 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
